@@ -1,9 +1,16 @@
 import React from 'react';
+import styled from '@emotion/styled';
+
+const Campo = styled.div`
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+`;
 
 const Formulario = () => {
 	return (
 		<form>
-			<div>
+			<Campo>
 				<label>Marca</label>
 				<select>
 					<option value="">Seleccione</option>
@@ -11,8 +18,8 @@ const Formulario = () => {
 					<option value="europeo">Europeo</option>
 					<option value="asiatico">Asiático</option>
 				</select>
-			</div>
-			<div>
+			</Campo>
+			<Campo>
 				<label>Año</label>
 				<select>
                     <option value="">-- Seleccione --</option>
@@ -27,8 +34,8 @@ const Formulario = () => {
                     <option value="2013">2013</option>
                     <option value="2012">2012</option>
 				</select>
-			</div>
-            <div>
+			</Campo>
+            <Campo>
                 <label>Plan</label>
                 <input 
                     type="radio"
@@ -41,7 +48,7 @@ const Formulario = () => {
                     name="plan"
                     value="completo"
                 />Completo
-            </div>
+            </Campo>
             <button>Cotizar</button>
 		</form>
 	);
