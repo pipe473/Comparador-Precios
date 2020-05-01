@@ -47,14 +47,20 @@ const Formulario = () => {
         marca: '',
         year: '',
         plan: ''
-
     });
+
+    // Extraer los valores del state
+    const { marca, year, plan } = datos;
+
 
 	return (
 		<form>
 			<Campo>
 				<Label>Marca</Label>
-				<Select>
+				<Select
+                    name="marca"
+                    value={marca}
+                >
 					<option value="">Seleccione</option>
 					<option value="americano">Americano</option>
 					<option value="europeo">Europeo</option>
@@ -63,7 +69,10 @@ const Formulario = () => {
 			</Campo>
 			<Campo>
 				<Label>Año</Label>
-				<Select>
+				<Select
+                    name="year"
+                    value={year}
+                >
                     <option value="">-- Seleccione --</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
@@ -83,12 +92,14 @@ const Formulario = () => {
                     type="radio"
                     name="plan"
                     value="basico"
+                    checked={plan === "basico"}
                 />Básico
 
                 <InputRadio 
                     type="radio"
                     name="plan"
                     value="completo"
+                    checked={plan === "completo"}
                 />Completo
             </Campo>
             <Boton>Cotizar</Boton>
