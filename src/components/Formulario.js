@@ -32,6 +32,10 @@ const Boton = styled.button`
     text-transform: uppercase;
     font-weight: bold;
     border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 const Formulario = () => {
