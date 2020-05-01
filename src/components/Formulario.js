@@ -7,11 +7,15 @@ const Campo = styled.div`
     align-items: center;
 `;
 
+const Label = styled.label`
+    flex: 0 0 100px;
+`;
+
 const Formulario = () => {
 	return (
 		<form>
 			<Campo>
-				<label>Marca</label>
+				<Label>Marca</Label>
 				<select>
 					<option value="">Seleccione</option>
 					<option value="americano">Americano</option>
@@ -20,7 +24,7 @@ const Formulario = () => {
 				</select>
 			</Campo>
 			<Campo>
-				<label>Año</label>
+				<Label>Año</Label>
 				<select>
                     <option value="">-- Seleccione --</option>
                     <option value="2021">2021</option>
@@ -36,7 +40,7 @@ const Formulario = () => {
 				</select>
 			</Campo>
             <Campo>
-                <label>Plan</label>
+                <Label>Plan</Label>
                 <input 
                     type="radio"
                     name="plan"
