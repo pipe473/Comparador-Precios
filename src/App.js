@@ -17,9 +17,18 @@ const ContenedorFormulario = styled.div`
 
 function App() {
 
-const [ resumen, guardarResumen ] = useState({})
+const [ resumen, guardarResumen ] = useState({
+  cotizacion: 0,
+  datos: {
+    marca: '',
+    year:  '',
+    plan:  ''
+  }
+});
 
+// Extraer datos
 const { datos } = resumen;
+
 
   return (
     <Contenedor>
@@ -30,10 +39,9 @@ const { datos } = resumen;
           <Formulario 
             guardarResumen={guardarResumen}
           />
-          { datos ? (
-          <Resumen />
-          ): null}
-          
+          <Resumen 
+            datos={datos}
+          />
       </ContenedorFormulario>
     </Contenedor>
   );
