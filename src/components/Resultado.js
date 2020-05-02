@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Resultado = () => {
+const Resultado = ({cotizacion}) => {
+
+
     return ( 
-        <h1>Resultado</h1>
+        (cotizacion === 0) ? <p>Elige marca, año y tipo de seguro</p> : cotizacion
      );
 }
  

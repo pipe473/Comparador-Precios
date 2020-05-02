@@ -28,7 +28,7 @@ const [ resumen, guardarResumen ] = useState({
 });
 
 // Extraer datos
-const { datos } = resumen;
+const { cotizacion, datos } = resumen;
 
 
   return (
@@ -43,7 +43,9 @@ const { datos } = resumen;
           <Resumen 
             datos={datos}
           />
-          <Resultado />
+          <Resultado 
+            cotizacion={cotizacion}
+          />
       </ContenedorFormulario>
     </Contenedor>
   );
