@@ -20,9 +20,9 @@ const Resumen = ({datos}) => {
         <ContenedorResumen>
             <h2>Resumen de la cotización</h2>
             <ul>
-                <li>Marca:</li>
-                <li>Plan:</li>
-                <li>Año del auto:</li>
+                <li>Marca: {marca}</li>
+                <li>Plan: {plan}</li>
+                <li>Año del auto: {year}</li>
             </ul>
         </ContenedorResumen>
      );
