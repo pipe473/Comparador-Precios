@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
+import { primeraMayuscula } from '../helper';
 
 const ContenedorResumen = styled.div`
     padding: 1rem;
@@ -20,8 +21,8 @@ const Resumen = ({datos}) => {
         <ContenedorResumen>
             <h2>Resumen de la cotización</h2>
             <ul>
-                <li>Marca: {marca}</li>
-                <li>Plan: {plan}</li>
+                <li>Marca: { primeraMayuscula(marca) }</li>
+                <li>Plan: { primeraMayuscula(plan) }</li>
                 <li>Año del auto: {year}</li>
             </ul>
         </ContenedorResumen>
