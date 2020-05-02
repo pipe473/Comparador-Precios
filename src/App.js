@@ -19,6 +19,8 @@ function App() {
 
 const [ resumen, guardarResumen ] = useState({})
 
+const { datos } = resumen;
+
   return (
     <Contenedor>
       <Header 
@@ -28,7 +30,10 @@ const [ resumen, guardarResumen ] = useState({})
           <Formulario 
             guardarResumen={guardarResumen}
           />
+          { datos ? (
           <Resumen />
+          ): null}
+          
       </ContenedorFormulario>
     </Contenedor>
   );
