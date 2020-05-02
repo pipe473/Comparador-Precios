@@ -9,13 +9,21 @@ const Mensaje = styled.p`
     text-align: center;
 `;
 
+const TextoCotizacion = styled.p`
+    color: #004e92;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+`;
+
 const Resultado = ({cotizacion}) => {
 
 
     return ( 
         (cotizacion === 0) 
                 ? <Mensaje>Elige marca, año y tipo de seguro</Mensaje> 
-                : <p>El total es: {cotizacion}€</p>
+                : <TextoCotizacion>El total es: {cotizacion}€</TextoCotizacion>
                 
                 
      );
