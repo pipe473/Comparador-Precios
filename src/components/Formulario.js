@@ -24,7 +24,7 @@ const InputRadio = styled.input`
 `;
 
 const Boton = styled.button`
-    background-color: #5D6D7E;
+    background-color: #004e92;
     font-size: 16px;
     width: 100%;
     padding: 1rem;
