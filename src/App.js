@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Formulario from './components/Formulario';
 import Resumen from './components/Resumen';
 import Resultado from './components/Resultado';
+import Spinner from './components/Spinner';
 
 import styled from '@emotion/styled';
 
@@ -40,9 +41,13 @@ const { cotizacion, datos } = resumen;
           <Formulario 
             guardarResumen={guardarResumen}
           />
+
+          <Spinner />
+
           <Resumen 
             datos={datos}
           />
+          
           <Resultado 
             cotizacion={cotizacion}
           />
