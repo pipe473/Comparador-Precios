@@ -9,8 +9,17 @@ const Mensaje = styled.p`
     text-align: center;
 `;
 
+const ResultadoCotizacion = styled.div`
+    text-align: center;
+    padding: .5rem;
+    border: 2px solid black;
+    background-color: #004e92;
+    margin-top: 1rem;
+    position: relative;
+`;
+
 const TextoCotizacion = styled.p`
-    color: #004e92;
+    color: white;
     padding: 1rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -23,8 +32,12 @@ const Resultado = ({cotizacion}) => {
     return ( 
         (cotizacion === 0) 
                 ? <Mensaje>Elige marca, año y tipo de seguro</Mensaje> 
-                : <TextoCotizacion>El total es: {cotizacion}€</TextoCotizacion>
-                
+                : 
+                    (
+                    <ResultadoCotizacion>
+                        <TextoCotizacion>El total es: {cotizacion}€</TextoCotizacion>
+                    </ResultadoCotizacion>
+                    )
                 
      );
 }
