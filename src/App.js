@@ -28,6 +28,8 @@ const [ resumen, guardarResumen ] = useState({
   }
 });
 
+const [ cargando, guardarCargando ] = useState(false);
+
 // Extraer datos
 const { cotizacion, datos } = resumen;
 
@@ -40,9 +42,10 @@ const { cotizacion, datos } = resumen;
       <ContenedorFormulario>
           <Formulario 
             guardarResumen={guardarResumen}
+            guardarCargando={guardarCargando}
           />
-
-          <Spinner />
+          { cargando ? <Spinner /> : null }
+          
 
           <Resumen 
             datos={datos}
