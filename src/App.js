@@ -50,10 +50,14 @@ const { cotizacion, datos } = resumen;
           <Resumen 
             datos={datos}
           />
-          
+
+          { !cargando ? 
           <Resultado 
-            cotizacion={cotizacion}
-          />
+          cotizacion={cotizacion}
+        /> : null
+        }
+          
+          
       </ContenedorFormulario>
     </Contenedor>
   );

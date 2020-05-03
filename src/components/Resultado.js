@@ -5,7 +5,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const Mensaje = styled.p`
     background-color: black;
     color:white;
-    margin-top: 2rem;
+    margin-top: 2rem; 
     padding: 1rem;
     text-align: center;
 `;
